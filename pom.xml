@@ -53,6 +53,11 @@
                     <artifactId>maven-checkstyle-plugin</artifactId>
                     <version>2.15</version>
                 </plugin>
+				 <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-site-plugin</artifactId>
+            <version>3.7.1</version>
+        </plugin>
             </plugins>
         </pluginManagement>
     </build>
@@ -92,6 +97,20 @@
                 <artifactId>maven-site-plugin</artifactId>
                 <version>3.7.1</version>
             </plugin>
+			  <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-project-info-reports-plugin</artifactId>
+            <version>3.0.0</version>
+            <reportSets>
+                <reportSet>
+                    <reports>
+                        <report>index</report>
+                        <report>licenses</report>
+                        <report>dependency-info</report>
+                    </reports>
+                </reportSet>
+            </reportSets>
+        </plugin>
         </plugins>
     </reporting>
 </project>
